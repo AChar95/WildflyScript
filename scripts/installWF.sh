@@ -16,7 +16,7 @@ echo 'WantedBy=multi-user.target' >> wildfly.service
 sudo mv wildfly.service /etc/systemd/system/wildfly.service
 
 sudo su - wildfly -c "wget https://download.jboss.org/wildfly/10.1.0.Final/wildfly-10.1.0.Final.tar.gz"
-sudo su - wildfly -c "tar .xvf wildfly-10.1.0.Final.tar.gz"
+sudo su - wildfly -c "tar -xvf wildfly-10.1.0.Final.tar.gz"
 
 sudo systemctl daemon-reload
 sudo systemctl enable wildfly
