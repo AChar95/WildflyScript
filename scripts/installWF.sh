@@ -1,3 +1,7 @@
+#! /bin/bash
+
+sudo apt install -y wget vim openjdk-8-jdk
+
 sudo useradd --create-home wildfly
 sudo usermod --shell /bin/bash wildfly
 
@@ -16,7 +20,7 @@ echo 'WantedBy=multi-user.target' >> wildfly.service
 sudo mv wildfly.service /etc/systemd/system/wildfly.service
 
 sudo su - wildfly -c "wget https://download.jboss.org/wildfly/10.1.0.Final/wildfly-10.1.0.Final.tar.gz"
-sudo su - wildfly -c "tar -xvf wildfly-10.1.0.Final.tar.gz"
+sudo su - wildfly -c "tar -xvf ./wildfly-10.1.0.Final.tar.gz"
 
 sudo systemctl daemon-reload
 sudo systemctl enable wildfly
