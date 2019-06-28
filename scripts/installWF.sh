@@ -12,7 +12,7 @@ echo >> wildfly.service
 echo "[Service]" >> wildfly.service
 echo 'User=jenkins' >> wildfly.service
 echo 'WorkingDirectory=/home/wildfly' >> wildfly.service
-echo 'ExecStart=/home/wildfly/wildfly-10.1.0.Final/bin/standalone -b=0.0.0.0' >> wildfly.service
+echo 'ExecStart=/home/wildfly/wildfly-10.1.0.Final/bin/standalone.sh -b=0.0.0.0' >> wildfly.service
 echo >> wildfly.service
 echo "[Install]" >> wildfly.service
 echo 'WantedBy=multi-user.target' >> wildfly.service
