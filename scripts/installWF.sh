@@ -7,7 +7,7 @@ sudo usermod --shell /bin/bash wildfly
 
 echo >> wildfly.service
 echo "[Unit]" >> wildfly.service
-echo "Description=Jenkins" >> wildfly.service
+echo "Description=Wildfly" >> wildfly.service
 echo >> wildfly.service
 echo "[Service]" >> wildfly.service
 echo 'User=jenkins' >> wildfly.service
